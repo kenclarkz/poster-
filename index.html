@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gold Rush Blackjack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <button id="music-toggle" aria-label="Toggle poker music">&#9834; MUSIC OFF</button>
+
+  <main class="table">
+    <h1 class="title">Gold Rush <span>Blackjack</span></h1>
+
+    <section class="area">
+      <div class="label">Dealer <span id="dealer-score" class="score"></span></div>
+      <div id="dealer-hand" class="hand"></div>
+    </section>
+
+    <p id="message" class="message">Place your bet to begin</p>
+
+    <section class="area">
+      <div id="player-hand" class="hand"></div>
+      <div class="label">You <span id="player-score" class="score"></span></div>
+    </section>
+
+    <div class="stats">
+      <div>Bet <strong id="bet">$0</strong></div>
+      <div class="divider" aria-hidden="true"></div>
+      <div>Bankroll <strong id="bankroll">$1,000</strong></div>
+    </div>
+
+    <section class="controls">
+      <div id="bet-panel" class="panel">
+        <button class="chip-btn" data-chip="5">5</button>
+        <button class="chip-btn" data-chip="25">25</button>
+        <button class="chip-btn" data-chip="100">100</button>
+        <button class="chip-btn" data-chip="500">500</button>
+        <button id="clear-bet" class="btn ghost">Clear</button>
+        <button id="deal" class="btn primary">Deal</button>
+      </div>
+      <div id="action-panel" class="panel" hidden>
+        <button id="hit" class="btn primary">Hit</button>
+        <button id="stand" class="btn primary">Stand</button>
+        <button id="double" class="btn ghost">Double</button>
+      </div>
+      <div id="end-panel" class="panel" hidden>
+        <button id="new-round" class="btn primary">New Round</button>
+        <button id="rebuy" class="btn ghost" hidden>Rebuy $1,000</button>
+      </div>
+    </section>
+
+    <footer>H hit &middot; S stand &middot; D double &middot; Enter deal / next</footer>
+  </main>
+
+  <script src="music.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
