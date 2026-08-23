@@ -3,10 +3,16 @@
 **Gold Rush Blackjack** — a sleek browser blackjack game in black & gold, with a
 smoky poker-lounge soundtrack generated live via the Web Audio API (no audio files needed).
 
-## Play
+## Play now
 
-Open `index.html` directly in a browser, serve the folder statically (e.g. `npx serve .`),
-or enable GitHub Pages.
+The game **is** a self-contained web page — no build step, no dependencies.
+
+- **Instantly:** open `index.html` in any browser (double-click it), or serve the
+  folder statically (`npx serve .`).
+- **Hosted:** enable GitHub Pages once — *Settings → Pages → Build and deployment →
+  Source: Deploy from a branch → `main` / `(root)`* — then play live at
+  **https://kenclarkz.github.io/poster-/** .
+  (Private repos need GitHub Pro, or make the repo public.)
 
 ## House rules
 
