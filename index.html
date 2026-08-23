@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blackjack · Noir &amp; Or</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0b0d'/%3E%3Ctext x='32' y='46' font-size='36' text-anchor='middle' fill='%23d4af37'%3E%E2%99%A0%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-suit">♠</span>
+    <h1>Blackjack</h1>
+    <span class="brand-suit">♠</span>
+  </div>
+  <div class="topbar-right">
+    <div class="bankroll-box">
+      <span class="mini-label">Bankroll</span>
+      <span id="bankrollAmount" class="money">$1,000</span>
+    </div>
+    <button id="musicBtn" class="pill-btn" aria-pressed="true" title="Toggle music">Music</button>
+    <button id="sfxBtn" class="pill-btn" aria-pressed="true" title="Toggle sound effects">SFX</button>
+  </div>
+</header>
+
+<main class="table" id="table">
+  <div id="shoeInfo" class="shoe-info">Shoe · 312</div>
+
+  <section class="hand-area">
+    <div class="area-head">
+      <span class="area-label">Dealer</span>
+      <span id="dealerScore" class="score hidden"></span>
+    </div>
+    <div id="dealerCards" class="cards-row"></div>
+  </section>
+
+  <section class="center-zone">
+    <div class="divider"><span>✦</span></div>
+    <div id="message" class="message">Place your bet</div>
+  </section>
+
+  <section class="hand-area">
+    <div id="playerCards" class="cards-row"></div>
+    <div class="area-head">
+      <span id="playerScore" class="score hidden"></span>
+      <span class="area-label">Player</span>
+    </div>
+    <div id="betPill" class="bet-pill hidden">Bet&nbsp;<span id="betAmount" class="money">$0</span></div>
+  </section>
+</main>
+
+<footer class="controls">
+  <div id="betPanel" class="panel">
+    <div class="chip-tray">
+      <button class="chip" data-value="10"><span>10</span></button>
+      <button class="chip" data-value="25"><span>25</span></button>
+      <button class="chip" data-value="50"><span>50</span></button>
+      <button class="chip" data-value="100"><span>100</span></button>
+      <button class="chip" data-value="500"><span>500</span></button>
+    </div>
+    <button id="clearBtn" class="btn ghost">Clear</button>
+    <button id="dealBtn" class="btn primary" disabled>Deal</button>
+  </div>
+
+  <div id="actionPanel" class="panel hidden">
+    <button id="hitBtn" class="btn primary">Hit</button>
+    <button id="standBtn" class="btn">Stand</button>
+    <button id="dblBtn" class="btn">Double</button>
+  </div>
+
+  <div id="resultPanel" class="panel hidden">
+    <button id="nextBtn" class="btn primary">Next Hand</button>
+  </div>
+</footer>
+
+<script src="js/audio.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
