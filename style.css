@@ -65,6 +65,34 @@ body {
   to { background-position: 200% center; }
 }
 
+/* ---------- Game nav ---------- */
+
+.game-nav {
+  display: flex;
+  gap: 10px;
+}
+
+.game-nav a {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--muted);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 999px;
+  padding: 7px 18px;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.game-nav a:hover { color: var(--gold-light); border-color: var(--gold); }
+
+.game-nav a[aria-current="page"] {
+  color: #201803;
+  background: linear-gradient(180deg, var(--gold-light), #caa53a);
+  border-color: transparent;
+}
+
 /* ---------- Areas ---------- */
 
 .area { display: flex; flex-direction: column; align-items: center; gap: 10px; }
