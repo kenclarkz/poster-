@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Neon Roulette - a futuristic single-zero roulette table with a glowing spinning wheel, full betting board and live-generated soundtrack." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23050810'/%3E%3Ccircle cx='32' cy='32' r='22' fill='none' stroke='%2319f0ff' stroke-width='4'/%3E%3Ccircle cx='32' cy='14' r='5' fill='%23ff2ec4'/%3E%3Ccircle cx='32' cy='32' r='7' fill='%2319f0ff'/%3E%3C/svg%3E" />
+  <title>Neon Roulette · Gold Rush</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="roulette.css" />
+</head>
+<body class="roulette">
+  <button id="music-toggle" aria-label="Toggle music">&#9834; MUSIC OFF</button>
+
+  <main class="table">
+    <h1 class="title">Neon <span>Roulette</span></h1>
+
+    <nav class="game-nav" aria-label="Games">
+      <a href="index.html">Blackjack</a>
+      <a href="roulette.html" aria-current="page">Roulette</a>
+    </nav>
+
+    <section class="wheel-zone" aria-label="Roulette wheel">
+      <canvas id="wheel" width="440" height="440" role="img" aria-label="Spinning roulette wheel"></canvas>
+      <div class="wheel-side">
+        <div id="result-badge" class="result-badge" aria-live="polite">
+          <span id="result-num">&mdash;</span>
+          <span id="result-color">ready</span>
+        </div>
+        <div id="history" class="history" aria-label="Recent numbers"></div>
+      </div>
+    </section>
+
+    <p id="message" class="message" aria-live="polite">Select a chip, tap the felt, hit Spin</p>
+
+    <div class="stats">
+      <div>Bet <strong id="bet">$0</strong></div>
+      <div class="divider" aria-hidden="true"></div>
+      <div>Bankroll <strong id="bankroll">$1,000</strong></div>
+    </div>
+
+    <section class="board-wrap" aria-label="Betting board">
+      <div id="board" class="board"></div>
+    </section>
+
+    <section class="controls">
+      <div id="chip-panel" class="panel">
+        <button class="chip-btn" data-chip="5">5</button>
+        <button class="chip-btn selected" data-chip="25">25</button>
+        <button class="chip-btn" data-chip="100">100</button>
+        <button class="chip-btn" data-chip="500">500</button>
+        <button id="undo" class="btn ghost">Undo</button>
+        <button id="clear-bet" class="btn ghost">Clear</button>
+        <button id="spin" class="btn primary">Spin</button>
+      </div>
+      <div id="end-panel" class="panel" hidden>
+        <button id="new-round" class="btn primary">New Round</button>
+        <button id="rebuy" class="btn ghost" hidden>Rebuy $1,000</button>
+      </div>
+    </section>
+
+    <footer>Space / Enter spin &middot; C clear &middot; Z undo &middot; Enter next round</footer>
+  </main>
+
+  <script src="music.js"></script>
+  <script src="roulette.js"></script>
+</body>
+</html>
