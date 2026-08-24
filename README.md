@@ -5,14 +5,17 @@ smoky poker-lounge soundtrack generated live via the Web Audio API (no audio fil
 
 ## Play now
 
+**Live site: https://kenclarkz.github.io/poster-/**
+
+> Note the trailing dash in the URL — the repo is named `poster-`, so
+> `kenclarkz.github.io/poster/` (without the dash) will 404. A custom `404.html`
+> auto-redirects mistyped paths under the project back to the game.
+
 The game **is** a self-contained web page — no build step, no dependencies.
 
 - **Instantly:** open `index.html` in any browser (double-click it), or serve the
   folder statically (`npx serve .`).
-- **Hosted:** enable GitHub Pages once — *Settings → Pages → Build and deployment →
-  Source: Deploy from a branch → `main` / `(root)`* — then play live at
-  **https://kenclarkz.github.io/poster-/** .
-  (Private repos need GitHub Pro, or make the repo public.)
+- **Hosted:** served via GitHub Pages — *Deploy from a branch → `main` / `(root)`*.
 
 ## House rules
 

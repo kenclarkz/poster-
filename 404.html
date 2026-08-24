@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="refresh" content="6; url=/poster-/" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23121014'/%3E%3Ctext x='32' y='47' font-size='42' text-anchor='middle' fill='%23d4af37'%3E%E2%99%A0%3C/text%3E%3C/svg%3E" />
+  <title>Page not found · Gold Rush Blackjack</title>
+  <style>
+    :root { color-scheme: dark; }
+    * { margin: 0; box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(1200px 600px at 50% -10%, rgba(212,175,55,.16), transparent 60%),
+        #121014;
+      color: #efe9d5;
+      font-family: Inter, system-ui, sans-serif;
+      text-align: center;
+      padding: 24px;
+    }
+    .spade { font-size: clamp(56px, 12vw, 96px); color: #d4af37; line-height: 1; }
+    h1 {
+      font-family: Cinzel, serif;
+      font-weight: 700;
+      font-size: clamp(28px, 6vw, 48px);
+      letter-spacing: .04em;
+      color: #f4e9c8;
+      margin-top: 18px;
+    }
+    p { margin-top: 10px; color: #b9b09a; font-size: 16px; }
+    .count { color: #d4af37; font-weight: 700; }
+    a.btn {
+      display: inline-block;
+      margin-top: 26px;
+      padding: 13px 30px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: .03em;
+      color: #171310;
+      background: linear-gradient(180deg, #ecd77f, #d4af37);
+      border: 1px solid #b8942c;
+      box-shadow: 0 8px 24px rgba(212,175,55,.25);
+    }
+    a.btn:hover { filter: brightness(1.06); }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="spade">&#9824;</div>
+    <h1>Busted &mdash; Page Not Found</h1>
+    <p>The dealer shuffled that card away. Taking you back in <span id="count" class="count">6</span>s&hellip;</p>
+    <a class="btn" id="home" href="/poster-/">Return to Gold Rush Blackjack</a>
+  </main>
+  <script>
+    if (location.protocol === "file:") {
+      document.getElementById("home").href = "index.html";
+    }
+    var n = 6;
+    setInterval(function () {
+      n = Math.max(0, n - 1);
+      document.getElementById("count").textContent = n;
+    }, 1000);
+  </script>
+</body>
+</html>
