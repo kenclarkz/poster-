@@ -272,8 +272,9 @@
       ctx.translate(CX, CX);
       ctx.rotate(rotNow + i * STEP);
       ctx.translate(0, -R * 0.82);
-      ctx.fillStyle = '#eaf6ff';
-      ctx.shadowColor = '#9fdcff';
+      const numColor = colorCss[colorOf(ORDER[i])];
+      ctx.fillStyle = numColor;
+      ctx.shadowColor = numColor;
       ctx.shadowBlur = 5;
       ctx.fillText(String(ORDER[i]), 0, 0);
       ctx.restore();
