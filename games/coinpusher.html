@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Coin Pusher · Arcade</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../arcade.css" />
+</head>
+<body class="arcade">
+  <button id="music-toggle" aria-label="Toggle arcade music">&#9834; MUSIC OFF</button>
+
+  <main class="table">
+    <h1 class="title">Coin <span>Pusher</span></h1>
+
+    <nav class="game-nav" aria-label="Games">
+      <a href="../arcade.html">Arcade</a>
+      <a href="../index.html">Blackjack</a>
+      <a href="../roulette.html">Roulette</a>
+    </nav>
+
+    <div class="back-row">
+      <a href="../arcade.html" class="btn ghost">← Back to Arcade</a>
+    </div>
+
+    <p id="message" class="message" aria-live="polite">Drop a coin and knock prizes off the ledge</p>
+
+    <div class="stats">
+      <div>Bet <strong id="bet">$10</strong></div>
+      <div class="divider" aria-hidden="true"></div>
+      <div>Bankroll <strong id="bankroll">$1,000</strong></div>
+      <div class="divider" aria-hidden="true"></div>
+      <div>Collect <strong id="jackpot" style="color:#39ff88">$0</strong></div>
+    </div>
+
+    <section class="canvas-frame">
+      <canvas id="game" width="640" height="420" role="img" aria-label="Coin pusher machine"></canvas>
+    </section>
+
+    <section class="controls">
+      <div id="bet-panel" class="panel">
+        <button class="chip-btn" data-chip="5">5</button>
+        <button class="chip-btn" data-chip="25">25</button>
+        <button class="chip-btn" data-chip="100">100</button>
+      </div>
+      <div class="panel">
+        <button id="drop" class="btn primary">Drop Coin</button>
+        <button id="new-round" class="btn ghost">Next</button>
+      </div>
+    </section>
+
+    <footer>Click Drop or press Space &middot; prizes push back on the ledge</footer>
+  </main>
+
+  <script src="../arcade-util.js"></script>
+  <script src="../music.js"></script>
+  <script src="coinpusher.js"></script>
+</body>
+</html>

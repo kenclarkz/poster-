@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Gold Rush Arcade - a neon arcade casino with 14 playable mini-games sharing one bankroll, live music and synthesized sound effects." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0812'/%3E%3Ctext x='32' y='47' font-size='40' text-anchor='middle' fill='%23ffe14d'%3E%E2%98%86%3C/text%3E%3C/svg%3E" />
+  <title>Arcade Casino · Gold Rush</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="arcade.css" />
+</head>
+<body class="arcade">
+  <button id="music-toggle" aria-label="Toggle arcade music">&#9834; MUSIC OFF</button>
+
+  <main class="table">
+    <h1 class="title">Gold Rush <span>Arcade Casino</span></h1>
+
+    <nav class="game-nav" aria-label="Games">
+      <a href="arcade.html" aria-current="page">Arcade</a>
+      <a href="index.html">Blackjack</a>
+      <a href="roulette.html">Roulette</a>
+    </nav>
+
+    <p class="arcade-intro">
+      Step into the neon arcade. Fourteen playable mini-games, all sharing the
+      same bankroll as the table games. Every spin, toss, and whack pays out in
+      real credits via the shared wallet.
+    </p>
+
+    <div class="arcade-stats">
+      <div>Bankroll <strong id="bankroll">$1,000</strong></div>
+    </div>
+
+    <section class="arcade-rack" id="rack" aria-label="Arcade games"></section>
+
+    <footer>Pick a game &middot; every win feeds the shared bankroll</footer>
+  </main>
+
+  <script src="arcade-util.js"></script>
+  <script src="music.js"></script>
+  <script src="arcade-hub.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ticket Blaster · Arcade</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../arcade.css" />
+</head>
+<body class="arcade">
+  <button id="music-toggle" aria-label="Toggle arcade music">&#9834; MUSIC OFF</button>
+
+  <main class="table">
+    <h1 class="title">Ticket <span>Blaster</span></h1>
+
+    <nav class="game-nav" aria-label="Games">
+      <a href="../arcade.html">Arcade</a>
+      <a href="../index.html">Blackjack</a>
+      <a href="../roulette.html">Roulette</a>
+    </nav>
+
+    <div class="back-row">
+      <a href="../arcade.html" class="btn ghost">← Back to Arcade</a>
+    </div>
+
+    <p id="message" class="message" aria-live="polite">Blast tickets before the 60-second timer runs out</p>
+
+    <section class="canvas-frame">
+      <canvas id="game" width="640" height="420" role="img" aria-label="Ticket blaster"></canvas>
+    </section>
+
+    <div class="score-row">
+      <div class="score-pill">Wager <strong id="bet">$10</strong></div>
+      <div class="score-pill">Tickets <strong id="score" style="color:#ffe14d">0</strong></div>
+      <div class="score-pill">Time <strong id="time" style="color:#39ff88">60</strong></div>
+      <div class="score-pill">Bankroll <strong id="bankroll">$1,000</strong></div>
+    </div>
+
+    <section class="controls">
+      <div class="panel">
+        <button class="chip-btn" data-chip="5">5</button>
+        <button class="chip-btn" data-chip="25">25</button>
+        <button class="chip-btn" data-chip="100">100</button>
+      </div>
+      <div class="panel">
+        <button id="start" class="btn primary">Start Round</button>
+      </div>
+    </section>
+
+    <div class="hint">Click / tap flying tickets to collect them. Gold tickets pay 5&times;. Each ticket is worth your wager.</div>
+
+    <footer>Click canvas to blast &middot; press Space to start</footer>
+  </main>
+
+  <script src="../arcade-util.js"></script>
+  <script src="../music.js"></script>
+  <script src="ticketblaster.js"></script>
+</body>
+</html>

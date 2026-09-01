@@ -1,11 +1,14 @@
 # poster-
 
-**Gold Rush** — a two-game browser casino in a self-contained static site:
+**Gold Rush** — a self-contained browser casino in a static site with a shared
+bankroll and a live-generated Web Audio soundtrack:
 
 - **Gold Rush Blackjack** — sleek black & gold blackjack with a smoky
-  poker-lounge soundtrack generated live via the Web Audio API.
+  poker-lounge soundtrack.
 - **Neon Roulette** — a futuristic single-zero roulette table with an animated
-  glowing wheel, full betting board, and the same shared bankroll & music engine.
+  glowing wheel, full betting board.
+- **Arcade Casino** — a neon arcade with **14 playable mini-games**, all
+  sharing the same bankroll and sound engine.
 
 No audio files, no build step, no dependencies.
 
@@ -17,9 +20,35 @@ No audio files, no build step, no dependencies.
 > `kenclarkz.github.io/poster/` (without the dash) will 404. A custom `404.html`
 > auto-redirects mistyped paths under the project back to the casino.
 
-Run it locally by opening `index.html` (blackjack) or `roulette.html` (roulette)
-in any browser, or serve the folder statically (`npx serve .`). Hosted via
-GitHub Pages — *Deploy from a branch → `main` / `(root)`*.
+Run it locally (open `arcade.html` for the hub, `index.html` for blackjack, or
+`roulette.html` for roulette) in any browser, or serve the folder statically
+(`npx serve .`). Hosted via GitHub Pages — *Deploy from a branch → `main` / `(root)`*.
+
+## The Arcade Casino
+
+Reach it via **Arcade** in the game nav (or `arcade.html`). It lists 14
+mini-games that wager the same shared bankroll:
+
+| Game | What it is | Highlights |
+| --- | --- | --- |
+| Coin Pusher | Drop coins onto a ledge | Prizes & jackpot stack |
+| Lucky Wheel | Spin a 12-slice wheel | Up to 20&times; |
+| Basketball Hoops | Time a power meter | Swish pays 3&times; |
+| Skee-Ball | Roll into scoring rings | Up to 5&times; |
+| Claw Machine | Move & drop the claw | Grab a prize |
+| Ticket Blaster | Blast flying tickets | Gold tickets 5&times; |
+| Jackpot Drop | Drop a gem through pegs | Up to 12&times; |
+| Plinko | Classic pachinko cascade | Up to 15&times; |
+| Horse Racing | Back a horse, watch it run | Up to 7:1 odds |
+| Arcade Slots | Pull the lever on 3 reels | Jackpot 100&times; |
+| Reaction Game | Reflex timing test | Fast = 5&times; |
+| Whack-a-Mole | Whack moles, dodge bombs | Per mole paid |
+| Bowling | Aim + power a roll | Strike 3&times; |
+| Blackjack Arcade | Same table game, arcade link | 3:2 |
+
+Every game is actually playable with animations, synthesized sound effects
+(via `SoundKit`), scoring, multipliers, and payments against the shared
+`grbj-bankroll` wallet.
 
 ## Blackjack house rules
 
@@ -49,6 +78,6 @@ GitHub Pages — *Deploy from a branch → `main` / `(root)`*.
 
 ## Shared bankroll
 
-The bankroll persists in `localStorage` and is shared between both games —
-winnings at the blackjack table are spendable at the roulette wheel.
-Rebuy $1,000 whenever you go broke.
+The bankroll persists in `localStorage` and is shared across **every** game —
+blackjack, roulette, and all 14 arcade games. Winnings anywhere are spendable
+everywhere else. Rebuy $1,000 whenever you go broke.

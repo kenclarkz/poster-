@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bowling · Arcade</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../arcade.css" />
+</head>
+<body class="arcade">
+  <button id="music-toggle" aria-label="Toggle arcade music">&#9834; MUSIC OFF</button>
+
+  <main class="table">
+    <h1 class="title">Neon <span>Bowling</span></h1>
+
+    <nav class="game-nav" aria-label="Games">
+      <a href="../arcade.html">Arcade</a>
+      <a href="../index.html">Blackjack</a>
+      <a href="../roulette.html">Roulette</a>
+    </nav>
+
+    <div class="back-row">
+      <a href="../arcade.html" class="btn ghost">← Back to Arcade</a>
+    </div>
+
+    <p id="message" class="message" aria-live="polite">Aim left/right and roll with the power meter</p>
+
+    <section class="canvas-frame">
+      <canvas id="game" width="520" height="520" role="img" aria-label="Bowling lane"></canvas>
+    </section>
+
+    <div class="stats">
+      <div>Bet <strong id="bet">$10</strong></div>
+      <div class="divider" aria-hidden="true"></div>
+      <div>Bankroll <strong id="bankroll">$1,000</strong></div>
+    </div>
+
+    <section class="controls">
+      <div class="panel">
+        <button class="chip-btn" data-chip="5">5</button>
+        <button class="chip-btn" data-chip="25">25</button>
+        <button class="chip-btn" data-chip="100">100</button>
+      </div>
+      <div class="panel">
+        <button id="left" class="btn ghost">◀ Aim</button>
+        <button id="roll" class="btn primary">Roll</button>
+        <button id="right" class="btn ghost">Aim ▶</button>
+      </div>
+    </section>
+
+    <table class="paytable" aria-label="Bowling payouts">
+      <thead><tr><th>Result</th><th>Payout</th></tr></thead>
+      <tbody>
+        <tr><td>Strike (10)</td><td class="pay">3&times;</td></tr>
+        <tr><td>Spare</td><td class="pay">2&times;</td></tr>
+        <tr><td>6&ndash;9 pins</td><td class="pay">1.5&times;</td></tr>
+        <tr><td>1&ndash;5 pins</td><td class="pay">1&times;</td></tr>
+        <tr><td>Gutter</td><td class="pay">&mdash;</td></tr>
+      </tbody>
+    </table>
+
+    <footer>← / → to aim &middot; Space to roll</footer>
+  </main>
+
+  <script src="../arcade-util.js"></script>
+  <script src="../music.js"></script>
+  <script src="bowling.js"></script>
+</body>
+</html>
