@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Horse Racing · Arcade</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../arcade.css" />
+</head>
+<body class="arcade">
+  <button id="music-toggle" aria-label="Toggle arcade music">&#9834; MUSIC OFF</button>
+
+  <main class="table">
+    <h1 class="title">Turbo <span>Horse Racing</span></h1>
+
+    <nav class="game-nav" aria-label="Games">
+      <a href="../arcade.html">Arcade</a>
+      <a href="../index.html">Blackjack</a>
+      <a href="../roulette.html">Roulette</a>
+    </nav>
+
+    <div class="back-row">
+      <a href="../arcade.html" class="btn ghost">← Back to Arcade</a>
+    </div>
+
+    <p id="message" class="message" aria-live="polite">Pick your steed and win the photo finish</p>
+
+    <section class="canvas-frame">
+      <canvas id="game" width="640" height="420" role="img" aria-label="Horse race track"></canvas>
+    </section>
+
+    <div class="stats">
+      <div>Bet <strong id="bet">$10</strong></div>
+      <div class="divider" aria-hidden="true"></div>
+      <div>Bankroll <strong id="bankroll">$1,000</strong></div>
+    </div>
+
+    <section class="controls">
+      <div class="panel">
+        <button class="chip-btn" data-chip="5">5</button>
+        <button class="chip-btn" data-chip="25">25</button>
+        <button class="chip-btn" data-chip="100">100</button>
+      </div>
+      <div class="panel" id="pick-panel">
+        <button class="btn ghost horse-pick" data-horse="0">Pick Red</button>
+        <button class="btn ghost horse-pick" data-horse="1">Pick Blue</button>
+        <button class="btn ghost horse-pick" data-horse="2">Pick Green</button>
+        <button class="btn ghost horse-pick" data-horse="3">Pick Gold</button>
+      </div>
+      <div class="panel" id="race-panel" hidden>
+        <button id="go" class="btn primary">Start Race</button>
+      </div>
+    </section>
+
+    <table class="paytable" aria-label="Odds by horse">
+      <thead><tr><th>Horse</th><th>Odds</th></tr></thead>
+      <tbody>
+        <tr><td>Red (fast)</td><td class="pay">5:2</td></tr>
+        <tr><td>Blue (steady)</td><td class="pay">2:1</td></tr>
+        <tr><td>Green (even)</td><td class="pay">4:5</td></tr>
+        <tr><td>Gold (longshot)</td><td class="pay">7:1</td></tr>
+      </tbody>
+    </table>
+
+    <footer>Pick a horse, then press Space to run</footer>
+  </main>
+
+  <script src="../arcade-util.js"></script>
+  <script src="../music.js"></script>
+  <script src="horseracing.js"></script>
+</body>
+</html>
