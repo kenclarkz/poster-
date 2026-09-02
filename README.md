@@ -1,13 +1,13 @@
 # poster-
 
-**Gold Rush** — a self-contained browser casino in a static site with a shared
+**Ken's Royal Palace** — a self-contained browser casino in a static site with a shared
 bankroll and a live-generated Web Audio soundtrack:
 
-- **Gold Rush Blackjack** — sleek black & gold blackjack with a smoky
+- **Ken's Royal Palace Blackjack** — sleek black & gold blackjack with a smoky
   poker-lounge soundtrack.
-- **Neon Roulette** — a futuristic single-zero roulette table with an animated
+- **Ken's Royal Roulette** — a futuristic single-zero roulette table with an animated
   glowing wheel, full betting board.
-- **Arcade Casino** — a neon arcade with **14 playable mini-games**, all
+- **Ken's Arcade Casino** — a neon arcade with **14 playable mini-games**, all
   sharing the same bankroll and sound engine.
 
 No audio files, no build step, no dependencies.
@@ -31,20 +31,20 @@ mini-games that wager the same shared bankroll:
 
 | Game | What it is | Highlights |
 | --- | --- | --- |
-| Coin Pusher | Drop coins onto a ledge | Prizes & jackpot stack |
-| Lucky Wheel | Spin a 12-slice wheel | Up to 20&times; |
-| Basketball Hoops | Time a power meter | Swish pays 3&times; |
-| Skee-Ball | Roll into scoring rings | Up to 5&times; |
-| Claw Machine | Move & drop the claw | Grab a prize |
-| Ticket Blaster | Blast flying tickets | Gold tickets 5&times; |
-| Jackpot Drop | Drop a gem through pegs | Up to 12&times; |
-| Plinko | Classic pachinko cascade | Up to 15&times; |
-| Horse Racing | Back a horse, watch it run | Up to 7:1 odds |
-| Arcade Slots | Pull the lever on 3 reels | Jackpot 100&times; |
-| Reaction Game | Reflex timing test | Fast = 5&times; |
-| Whack-a-Mole | Whack moles, dodge bombs | Per mole paid |
-| Bowling | Aim + power a roll | Strike 3&times; |
-| Blackjack Arcade | Same table game, arcade link | 3:2 |
+| Ken's Coin Pusher | Drop coins onto a ledge | Prizes & jackpot stack |
+| Ken's Wheel of Fortune | Spin a 12-slice wheel | Up to 20&times; |
+| Ken's Hoops | Time a power meter | Swish pays 3&times; |
+| Ken's Skee-Ball | Roll into scoring rings | Up to 5&times; |
+| Ken's Claw | Move & drop the claw | Grab a prize |
+| Ken's Ticket Blaster | Blast flying tickets | Gold tickets 5&times; |
+| Ken's Jackpot Drop | Drop a gem through pegs | Up to 12&times; |
+| Ken's Plinko | Classic pachinko cascade | Up to 15&times; |
+| Ken's Royal Derby | Back a horse, watch it run | Up to 7:1 odds |
+| Ken's Slots | Pull the lever on 3 reels | Jackpot 100&times; |
+| Ken's Reaction | Reflex timing test | Fast = 5&times; |
+| Ken's Whack-a-Mole | Whack moles, dodge bombs | Per mole paid |
+| Ken's Bowling | Aim + power a roll | Strike 3&times; |
+| Ken's Blackjack | Same table game, arcade link | 3:2 |
 
 Every game is actually playable with animations, synthesized sound effects
 (via `SoundKit`), scoring, multipliers, and payments against the shared
